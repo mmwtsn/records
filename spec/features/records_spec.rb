@@ -1,13 +1,25 @@
 require 'spec_helper'
 
 feature 'Records' do
+  scenario 'query discogs', js: true do
+    visit root_path
 
-  scenario 'query discogs' do
-    pending # User can query the Discogs API to find an artist's catalog
+    fill_in 'artist', with: 'Karenn'
+    click_button 'search'
+
+    expect(page).to have_content('Sheworks 004')
   end
  
-  scenario 'select record from response' do
-    pending # User can click on a visual representation of the API response
+  scenario 'select record from response', js: true do
+    visit root_path
+
+    fill_in 'artist', with: 'Karenn'
+    click_button 'search'
+
+    expect(page.assert_selector('.record')).to be_true
+
+    first('.record').click
+    expect(page.assert_selector('.selected')).to be_true
   end
 
   scenario 'save record from response' do
