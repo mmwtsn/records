@@ -2,19 +2,13 @@ require 'spec_helper'
 
 feature 'Records' do
   scenario 'query discogs', js: true do
-    visit root_path
-
-    fill_in 'artist', with: 'Karenn'
-    click_button 'search'
+    search_for('Karenn')
 
     expect(page).to have_content('Sheworks 004')
   end
  
   scenario 'select record from response', js: true do
-    visit root_path
-
-    fill_in 'artist', with: 'Karenn'
-    click_button 'search'
+    search_for('Karenn')
 
     expect(page.assert_selector('.record')).to be_true
 
@@ -36,5 +30,12 @@ feature 'Records' do
 
   scenario 'view a record in their collection' do
     pending # User can click on a record to see more information about it
+  end
+
+  def search_for(artist)
+    visit root_path
+
+    fill_in 'artist', with: artist
+    click_button 'search'
   end
 end
