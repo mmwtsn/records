@@ -1,1 +1,9 @@
 <h1>records</h1>
+
+<%= form_tag search_records_path, remote: true, id: 'search_artists' do %>
+  <%= label_tag :artist %>
+  <%= search_field_tag :artist %>
+  <%= submit_tag 'search', id: 'search' %>
+<% end %>
+
+<section class="records"></section>
