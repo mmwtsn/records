@@ -1,0 +1,9 @@
+<% @records.each do |record| %>
+  var title = '<h1><%= record[:title] %></h1>';
+  var label = '<p><%= record[:label] %></p>';
+  $('.records').append('<article class="record">' + title + label + '</article>');
+<% end %>
+
+$('.record').on('click', function() {
+  $(this).addClass('selected');
+});
