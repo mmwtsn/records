@@ -1,0 +1,41 @@
+@import 'bourbon';
+@import 'base/base';
+
+body {
+  max-width: 960px;
+  margin: 150px auto 0;
+  font-family: Helvetica, serif;
+}
+
+.record {
+  background: #f8f8f8;
+  border-bottom: #eee 4px solid;
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+
+  &:hover {
+    cursor: pointer;
+    background: #f0f0f0;
+  }
+
+  &:active {
+    background: #eee;
+  }
+}
+
+.selected {
+  background: lightgreen;
+
+  &:hover {
+    background: lightgreen;
+    cursor: default;
+  }
+
+  &:before {
+    content: '✓';
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
