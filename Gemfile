@@ -12,6 +12,7 @@ gem 'therubyracer'
 # Front-end libraries
 gem 'sass-rails', '~> 4.0.3'
 gem 'jquery-rails'
+gem 'bourbon'
 
 # Authentication
 gem 'devise'
@@ -25,6 +26,7 @@ end
 # Gems available for testing
 group :test do
   gem 'capybara'
+  gem 'capybara-webkit'
   gem 'webmock'
   gem 'factory_girl_rails', "~> 4.0"
   gem 'database_cleaner'
