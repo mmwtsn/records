@@ -4,7 +4,12 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 require 'capybara/rails'
+require 'capybara/webkit/matchers'
 require 'webmock/rspec'
+
+# Set Capybara's JavaScript driver to use Webkit over the default Selenium
+# so that tests can be run in a headless environment via capybara-webkit
+Capybara.javascript_driver = :webkit
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -14,11 +19,14 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 
+# Prevent test suite from making requests to external APIs
+WebMock.disable_net_connect!(allow_localhost: true)
+
 RSpec.configure do |config|
-  # If you're not using ActiveRecord, or you'd prefer not to run each of your
-  # examples within a transaction, remove the following line or assign false
-  # instead of true.
-  config.use_transactional_fixtures = true
+  # Transactional fixtures will cause database-reliant tests to fail
+  # if a JavaScript driver is enabled for those tests. In order to reset
+  # the test database between tests, we'll use the DatabaseCleaner gem
+  config.use_transactional_fixtures = false
 
   # If true, the base class of anonymous controllers will be inferred
   # automatically. This will be the default behavior in future versions of
@@ -34,21 +42,11 @@ RSpec.configure do |config|
   # Make FactoryGirl's methods available
   config.include FactoryGirl::Syntax::Methods
 
-  # Additional configuration for FactoryGirl
-  config.before(:suite) do
-    begin
-      DatabaseCleaner.start
-      FactoryGirl.lint
-    ensure
-      DatabaseCleaner.clean
-    end
-  end
-
   # DatabaseCleaner configuration via the README:
   # https://github.com/bmabey/database_cleaner#rspec-example
   config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.clean_with :truncation
+    FactoryGirl.lint
+    DatabaseCleaner.strategy = :truncation
   end
   
   # Start DatabaseCleaner before each test spec is run
