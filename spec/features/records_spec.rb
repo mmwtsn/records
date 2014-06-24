@@ -7,21 +7,34 @@ feature 'Records' do
     expect(page).to have_content('Sheworks 004')
   end
  
-  scenario 'select record from response', js: true do
+  scenario 'save records from response', js: true do
     search_for('Karenn')
 
+    # Search should return a result
     expect(page.assert_selector('.record')).to be_true
 
+    # Clicking a result should "select" it
     first('.record').click
     expect(page.assert_selector('.selected')).to be_true
-  end
 
-  scenario 'save record from response' do
-    pending # User can save their selection to the database
+    # Selected results should save to the database and load
+    within('.collection') do
+      expect(page.assert_selector('.record')).to be_true
+    end
   end
 
   scenario 'view all saved records' do
-    pending # User can see records they have saved to their collection
+    record = FactoryGirl.create(:record)
+
+    visit root_path
+
+    # Existing results should be visible
+    within('.collection') do
+      expect(page.assert_selector('.record')).to be_true
+    end
+
+    # Saved factory record should be visible
+    expect(page).to have_content(record.title)
   end
 
   scenario 'delete a saved record' do
