@@ -1,0 +1,8 @@
+<% @records.each do |record| %>
+<article class="record">
+  <%= record.title %>
+  <%= link_to 'view' %>
+  <%= link_to 'edit' %>
+  <%= link_to 'delete' %>
+</article>
+<% end %>
