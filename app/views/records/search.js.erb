@@ -1,9 +1,48 @@
-<% @records.each do |record| %>
-  var title = '<h1><%= record[:title] %></h1>';
-  var label = '<p><%= record[:label] %></p>';
-  $('.records').append('<article class="record">' + title + label + '</article>');
-<% end %>
+// Ensure global record object exists
+window.RECORDS = window.RECORDS || {};
 
+// Print each individual record response from Discogs to the DOM
+var results = <%= raw json_escape(@results) %>;
+
+// Iterate over search results and add them to the DOM and the records collection
+results['results'].forEach(function(record) {
+  $('.records').append(
+    '<article class="record" data-id="' + record["id"] + '">'
+    + '<h1>' + record["title"] + '</h1>'
+    + '<p>' + record["label"] + '</p>'
+  + '</article>'
+  );
+
+  RECORDS[record['id']] = {
+    cover:      record['thumb'],
+    title:      record['title'],
+    label:      record['label'].join(', '),
+    country:    record['country'],
+    year:       record['year'],
+    url:        record['resource_url'],
+    discogs_id: record['id']
+  };
+});
+
+// Delegate event when user interacts with any record
 $('.record').on('click', function() {
-  $(this).addClass('selected');
+
+  // Cache reference to current record
+  $this = $(this);
+
+  // Update the UI to indicate that the selection was received
+  $this.addClass('selected');
+
+  // Grab Disogs catalog ID to index into RECORDS global object
+  var id = $this.data('id');
+
+  // Save the user's selection to the database
+  $.ajax({
+    type: 'POST',
+    url: '/records',
+    data: RECORDS[id]
+  }).done(function() {
+    $this.addClass('saved');
+  });
+
 });
