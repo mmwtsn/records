@@ -1,0 +1,7 @@
+<% if @record.errors.any? %>
+  <% @record.errors.full_messages.each do |error| %>
+    $('main').append('<p>' + '<%= message.html_safe %>' + '</p>');
+  <% end %>
+<% else %>
+  $('.collection').html("<%= j render('index') %>");
+<% end %>
