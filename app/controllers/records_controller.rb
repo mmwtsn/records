@@ -2,22 +2,32 @@ class RecordsController < ApplicationController
   require 'net/http'
 
   def index
+    @records = Record.all
+  end
+
+  def create
+    @record = Record.create!(record_params)
+    @records = Record.all
+
+    respond_to do |format|
+      format.js
+    end
   end
 
   def search
     artist = params[:artist]
 
-    #json = JSON.parse(Net::HTTP.get('api.discogs.com', "/database/search?artist=#{artist}"))
-    json = JSON.parse(IO.read(Rails.root + 'tmp/response.json'))
-
-    @records = []
-
-    json['results'].each do |record|
-      @records.push({title: record['title'], label: record['label']})
-    end
+    #@results = Net::HTTP.get('api.discogs.com', "/database/search?artist=#{artist}")
+    @results = IO.read(Rails.root + 'tmp/response.json')
 
     respond_to do |format|
       format.js
     end
+  end
+
+  private
+
+  def record_params
+    params.permit(:cover, :title, :label, :country, :year, :url, :discogs_id)
   end
 end
