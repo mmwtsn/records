@@ -43,11 +43,4 @@ feature 'Records' do
   scenario 'view a record in their collection' do
     pending # User can click on a record to see more information about it
   end
-
-  def search_for(artist)
-    visit root_path
-
-    fill_in 'artist', with: artist
-    click_button 'search'
-  end
 end
