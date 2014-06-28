@@ -1,8 +1,8 @@
 <% @records.each do |record| %>
 <article class="record">
   <%= record.title %>
-  <%= link_to 'view' %>
-  <%= link_to 'edit' %>
-  <%= link_to 'delete', record_path(record.id), method: :delete, remote: true %>
+  <%= link_to 'view', class: 'view-record' %>
+  <%= link_to 'edit', class: 'edit-record' %>
+  <%= link_to 'delete', record_path(record.id), method: :delete, remote: true, class: 'delete-record' %>
 </article>
 <% end %>
