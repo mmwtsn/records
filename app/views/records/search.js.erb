@@ -11,9 +11,9 @@ results['results'].forEach(function(record) {
   if (record['format'][0] === 'Vinyl') {
     $('.records').append(
       '<article class="record" data-id="' + record["id"] + '">'
-      + '<h1>' + record["title"] + '</h1>'
-      + '<p>' + record["label"] + '</p>'
-      + '<p>' + record["format"][0] + '</p>'
+      + '<h1 class="title">' + record["title"] + '</h1>'
+      + '<p class="label">' + record["label"] + '</p>'
+      + '<p class="format">' + record["format"][0] + '</p>'
     + '</article>'
     );
 
