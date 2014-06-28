@@ -25,6 +25,15 @@ class RecordsController < ApplicationController
     end
   end
 
+  def destroy
+    @record = Record.find(params[:id])
+    @record.destroy
+
+    respond_to do |format|
+      format.js {render nothing: true}
+    end
+  end
+
   private
 
   def record_params
