@@ -6,6 +6,7 @@ require 'rspec/autorun'
 require 'capybara/rails'
 require 'capybara/webkit/matchers'
 require 'webmock/rspec'
+require 'helpers'
 
 # Set Capybara's JavaScript driver to use Webkit over the default Selenium
 # so that tests can be run in a headless environment via capybara-webkit
@@ -23,6 +24,9 @@ ActiveRecord::Migration.maintain_test_schema!
 WebMock.disable_net_connect!(allow_localhost: true)
 
 RSpec.configure do |config|
+  # Include custom helper methods
+  config.include Helpers, type: :feature
+
   # Transactional fixtures will cause database-reliant tests to fail
   # if a JavaScript driver is enabled for those tests. In order to reset
   # the test database between tests, we'll use the DatabaseCleaner gem
