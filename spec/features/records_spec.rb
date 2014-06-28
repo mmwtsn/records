@@ -1,12 +1,13 @@
 require 'spec_helper'
 
 feature 'Records' do
+  # User can search Discogs for an artist
   scenario 'query discogs', js: true do
     search_for('Karenn')
-
     expect(page).to have_content('Sheworks 004')
   end
  
+  # User can save a record from the query response
   scenario 'save records from response', js: true do
     search_for('Karenn')
 
@@ -22,22 +23,22 @@ feature 'Records' do
     end
   end
 
+  # Saved records should be visible on load
   scenario 'view all saved records' do
     record = FactoryGirl.create(:record)
-
     visit root_path
 
-    # Existing results should be visible
     within('.collection') do
+      # Existing results should exist in records collection
       expect(page.assert_selector('.record')).to be_true
-    end
 
-    # Saved factory record should be visible
-    expect(page).to have_content(record.title)
+      # Each record should have at least a title
+      expect(page).to have_content(record.title)
+    end
   end
 
   scenario 'delete a saved record' do
-    pending # User can remove a record form their collection
+    pending # User can remove records from their collection because nothing lasts forever
   end
 
   scenario 'view a record in their collection' do
