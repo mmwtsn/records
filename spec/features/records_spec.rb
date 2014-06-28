@@ -13,9 +13,8 @@ feature 'Records' do
     # Search should return a result
     expect(page.assert_selector('.record')).to be_true
 
-    # Clicking a result should "select" it
+    # Select first record to save it
     first('.record').click
-    expect(page.assert_selector('.selected')).to be_true
 
     # Selected results should save to the database and load
     within('.collection') do

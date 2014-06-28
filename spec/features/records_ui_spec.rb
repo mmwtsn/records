@@ -21,6 +21,14 @@ feature 'Records UI' do
     end
   end
 
+  scenario 'indicates when records are selected', js: true do
+    search_for('Karenn')
+    expect(page.assert_selector('.record')).to be_true
+
+    first('.record').click
+    expect(page.assert_selector('.selected')).to be_true
+  end
+
   def search_for(artist)
     visit root_path
 
