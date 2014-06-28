@@ -6,7 +6,6 @@ $(function() {
   var $artist  = $('#artist');
   var $search  = $('#search');
   var $records = $('.records');
-  var query    = $artist.val();
 
   //
   // Ensure search input field is empty on load
@@ -18,17 +17,21 @@ $(function() {
   // Toggle display of search instructions to the user
   //
   $search.on('click', function(e) {
+    // Get search query value for each search
+    var query    = $artist.val();
 
     // Ensure records and errors are cleared between searches
     $records.empty();
-    $('.error').empty();
 
     // TODO
     // Display AJAX loading GIF while request is being processed
 
+    // Upon empty search, clear or update error message
     if (query === '') {
       e.preventDefault();
-      $('main').prepend('<p class="error">Search for something!</p>');
+
+      // Update error message
+      $('.error').html('Search for something!');
     }
   });
 
