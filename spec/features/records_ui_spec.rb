@@ -32,11 +32,4 @@ feature 'Records UI' do
     first('.record').click
     expect(page.assert_selector('.selected')).to be_true
   end
-
-  def search_for(artist)
-    visit root_path
-
-    fill_in 'artist', with: artist
-    click_button 'search'
-  end
 end
