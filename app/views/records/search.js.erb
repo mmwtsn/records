@@ -6,22 +6,28 @@ var results = <%= raw json_escape(@results) %>;
 
 // Iterate over search results and add them to the DOM and the records collection
 results['results'].forEach(function(record) {
-  $('.records').append(
-    '<article class="record" data-id="' + record["id"] + '">'
-    + '<h1>' + record["title"] + '</h1>'
-    + '<p>' + record["label"] + '</p>'
-  + '</article>'
-  );
 
-  RECORDS[record['id']] = {
-    cover:      record['thumb'],
-    title:      record['title'],
-    label:      record['label'].join(', '),
-    country:    record['country'],
-    year:       record['year'],
-    url:        record['resource_url'],
-    discogs_id: record['id']
-  };
+  // Only allow the record into the collection if it's vinyl
+  if (record['format'][0] === 'Vinyl') {
+    $('.records').append(
+      '<article class="record" data-id="' + record["id"] + '">'
+      + '<h1>' + record["title"] + '</h1>'
+      + '<p>' + record["label"] + '</p>'
+      + '<p>' + record["format"][0] + '</p>'
+    + '</article>'
+    );
+
+    RECORDS[record['id']] = {
+      cover:      record['thumb'],
+      title:      record['title'],
+      label:      record['label'].join(', '),
+      country:    record['country'],
+      format:     record['format'],
+      year:       record['year'],
+      url:        record['resource_url'],
+      discogs_id: record['id']
+    };
+  }
 });
 
 // Delegate event when user interacts with any record
