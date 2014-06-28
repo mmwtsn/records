@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'Records UI' do
-  scenario 'is reset between refreshes', js: true do
+  scenario 'prevents empty searches', js: true do
     visit root_path
 
     click_button 'search'
