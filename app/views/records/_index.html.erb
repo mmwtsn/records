@@ -3,6 +3,6 @@
   <%= record.title %>
   <%= link_to 'view' %>
   <%= link_to 'edit' %>
-  <%= link_to 'delete' %>
+  <%= link_to 'delete', record_path(record.id), method: :delete, remote: true %>
 </article>
 <% end %>
