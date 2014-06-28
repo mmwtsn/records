@@ -35,4 +35,11 @@ $(function() {
     }
   });
 
+  //
+  // Remove deleted record upon successful POST
+  //
+  $('.delete-record').bind('ajax:success', function() {
+    $(this).closest('.record').remove();
+  });
+
 });
