@@ -2,7 +2,7 @@
 ## Description
 A small web application for keeping track of my vinyl. Built using [Ruby on Rails](https://github.com/rails/rails) on top of the [Discogs API](http://www.discogs.com/developers/index.html).
 
-Built for [CS 50](https://cs50.harvard.edu/)
+Built for [CS50](https://cs50.harvard.edu/)
 
 ## License
 ## Author
