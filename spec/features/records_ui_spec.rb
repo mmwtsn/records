@@ -2,10 +2,8 @@ require 'spec_helper'
 
 feature 'Records UI' do
   scenario 'prevents empty searches', js: true do
-    visit root_path
-
     # Submit empty search
-    click_button 'search'
+    search_for('')
 
     # Check for empty search error message
     expect(page).to have_content('Search for something!')
