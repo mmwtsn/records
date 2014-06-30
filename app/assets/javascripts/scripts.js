@@ -42,6 +42,7 @@ $(function() {
     $clear.on('click', function() {
       $records.empty();
       $artist.val('');
+      $(this).hide();
     });
   });
 
