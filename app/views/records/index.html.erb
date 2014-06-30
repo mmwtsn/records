@@ -1,9 +1,10 @@
-<h1>records</h1>
+<h3>search for an artist&#133;</h3>
 
 <%= form_tag search_records_path, remote: true, id: 'search_artists' do %>
-  <%= label_tag :artist %>
-  <%= search_field_tag :artist %>
   <%= submit_tag 'search', id: 'search' %>
+  <div class="search-wrapper">
+    <%= search_field_tag :artist, class: 'artist' %>
+  </div>
 <% end %>
 
 <button class="clear">clear</button>
@@ -11,6 +12,7 @@
 <section class="results"></section>
 
 <section class="collection">
+  <h1>collection</h1>
 
   <%= render 'index' %>
 
