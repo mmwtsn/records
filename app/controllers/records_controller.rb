@@ -21,6 +21,7 @@ class RecordsController < ApplicationController
 
   def search
     artist = params[:artist].split(' ').join('+')
+    @records = Record.all
 
     if Rails.env == 'test'
       @results = IO.read(Rails.root + 'spec/support/response.json')
