@@ -29,7 +29,6 @@ group :test do
   gem 'capybara-webkit'
   gem 'factory_girl_rails', "~> 4.0"
   gem 'database_cleaner'
-  gem 'webmock'
   gem 'launchy'
 end
 
