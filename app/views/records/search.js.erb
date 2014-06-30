@@ -9,7 +9,7 @@ results['results'].forEach(function(record) {
 
   // Only allow the record into the collection if it's vinyl
   if (record['format'][0] === 'Vinyl') {
-    $('.records').append(
+    $('.results').append(
       '<article class="record" data-id="' + record["id"] + '">'
       + '<h1 class="title">' + record["title"] + '</h1>'
       + '<p class="label">' + record["label"] + '</p>'
@@ -30,7 +30,7 @@ results['results'].forEach(function(record) {
 });
 
 // Delegate event when user interacts with any record
-$('.record').on('click', function() {
+$('.results .record').on('click', function() {
 
   // Cache reference to current record
   $this = $(this);
