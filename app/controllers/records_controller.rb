@@ -5,6 +5,11 @@ class RecordsController < ApplicationController
     @records = Record.all
   end
 
+  def show
+    record = Record.find(params[:id])
+    @record = JSON.parse(Net::HTTP.get('api.discogs.com', "/releases/#{record.discogs_id}"))
+  end
+
   def create
     @record = Record.create!(record_params)
     @records = Record.all
@@ -15,10 +20,10 @@ class RecordsController < ApplicationController
   end
 
   def search
-    artist = params[:artist]
+    artist = params[:artist].split(' ').join('+')
 
-    #@results = Net::HTTP.get('api.discogs.com', "/database/search?artist=#{artist}")
-    @results = IO.read(Rails.root + 'tmp/response.json')
+    @results = Net::HTTP.get('api.discogs.com', "/database/search?artist=#{artist}&per_page=100")
+    #@results = IO.read(Rails.root + 'tmp/response.json')
 
     respond_to do |format|
       format.js
