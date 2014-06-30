@@ -23,7 +23,7 @@ class RecordsController < ApplicationController
     artist = params[:artist].split(' ').join('+')
 
     if Rails.env == 'test'
-      @results = IO.read(Rails.root + 'tmp/response.json')
+      @results = IO.read(Rails.root + 'spec/support/response.json')
     else
       @results = Net::HTTP.get('api.discogs.com', "/database/search?artist=#{artist}&per_page=100")
     end
