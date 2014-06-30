@@ -5,7 +5,6 @@ require 'rspec/rails'
 require 'rspec/autorun'
 require 'capybara/rails'
 require 'capybara/webkit/matchers'
-require 'webmock/rspec'
 require 'helpers'
 
 # Set Capybara's JavaScript driver to use Webkit over the default Selenium
@@ -19,9 +18,6 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 # Checks for pending migrations before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
-
-# Prevent test suite from making requests to external APIs
-WebMock.disable_net_connect!(allow_localhost: true)
 
 RSpec.configure do |config|
   # Include custom helper methods
