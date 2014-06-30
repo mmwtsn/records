@@ -2,19 +2,29 @@
 <html>
 <head>
   <title>Records</title>
+  <%= stylesheet_link_tag    'http://fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<section class="masthead">
+<header>
+   <h1>records</h1>
+   <h2>for managing vinyl</h2>
+
    <div class="error"></div>
+</header>
+
 </section>
 
 <main>
   <%= yield %>
 </main>
+
+<footer>
+  <p>Made by <a href="https://github.com/mmwtsn/records">@mmwtsn</a> in 2014</p>
+</footer>
 
 </body>
 </html>
