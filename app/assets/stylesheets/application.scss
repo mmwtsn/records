@@ -104,13 +104,29 @@ h3 {
   }
 }
 
+.back,
 .clear {
-  display: none;
   background: #444;
 
   &:hover {
     background: #4c4c4c;
   }
+}
+
+.back {
+  float: right;
+  margin: -2rem 0;
+  font-size: 0.8rem;
+
+  @extend button;
+
+  &:active {
+    color: #fff;
+  }
+}
+
+.clear {
+  display: none;
 }
 
 .view-record,
