@@ -33,6 +33,29 @@ feature 'Records UI' do
     expect(page.assert_selector('.selected')).to be_true
   end
 
+  scenario 'indicates when results are already saved', js: true do
+    search_for('Karenn')
+
+    # Search for Karenn should return results
+    expect(page.assert_selector('.record')).to be_true
+
+    # Save first result
+    first('.record').click
+
+    # Ensure record was saved to collection
+    within('.collection') do
+      expect(page.assert_selector('.record')).to be_true
+    end
+
+    # Re-run identical search
+    search_for('Karenn')
+
+    # Expect first result to already be saved
+    within('.results') do
+      expect(page.assert_selector('.saved')).to be_true
+    end
+  end
+
   scenario 'clears current search results', js: true do
     search_for('Karenn')
 
