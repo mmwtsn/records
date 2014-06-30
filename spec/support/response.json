@@ -1,0 +1,323 @@
+{
+
+    "pagination": {
+        "per_page": 50,
+        "items": 10,
+        "page": 1,
+        "urls": { },
+        "pages": 1
+    },
+    "results": [
+        {
+            "style": [
+                "Techno"
+            ],
+            "thumb": "http://api.discogs.com/image/R-90-3984537-1353371269-8788.jpeg",
+            "format": [
+                "Vinyl",
+                "12\"",
+                "45 RPM",
+                "33 ⅓ RPM"
+            ],
+            "country": "UK",
+            "title": "Karenn - Untitled (Sheworks 004)",
+            "uri": "/Karenn-Untitled-Sheworks-004/release/3984537",
+            "community": {
+                "have": 510,
+                "want": 371
+            },
+            "label": [
+                "Works The Long Nights"
+            ],
+            "catno": "SHEWORKS004",
+            "year": "2012",
+            "genre": [
+                "Electronic"
+            ],
+            "resource_url": "http://api.discogs.com/releases/3984537",
+            "type": "release",
+            "id": 3984537
+        },
+        {
+            "style": [
+                "Techno"
+            ],
+            "thumb": "http://api.discogs.com/image/R-90-3247027-1328646279.jpeg",
+            "format": [
+                "Vinyl",
+                "12\"",
+                "White Label",
+                "45 RPM",
+                "33 ⅓ RPM"
+            ],
+            "country": "UK",
+            "title": "Karenn - Untitled (Sheworks 001)",
+            "uri": "/Karenn-Untitled-Sheworks-001/release/3247027",
+            "community": {
+                "have": 278,
+                "want": 529
+            },
+            "label": [
+                "Works The Long Nights"
+            ],
+            "catno": "SHEWORKS001",
+            "year": "2011",
+            "genre": [
+                "Electronic"
+            ],
+            "resource_url": "http://api.discogs.com/releases/3247027",
+            "type": "release",
+            "id": 3247027
+        },
+        {
+            "style": [
+                "Techno"
+            ],
+            "thumb": "http://api.discogs.com/image/R-90-4947975-1380288379-9870.jpeg",
+            "format": [
+                "File",
+                "WAV"
+            ],
+            "country": "UK",
+            "title": "Karenn - Untitled (Sheworks 001)",
+            "uri": "/Karenn-Untitled-Sheworks-001/release/4947975",
+            "community": {
+                "have": 17,
+                "want": 19
+            },
+            "label": [
+                "Works The Long Nights"
+            ],
+            "catno": "SHEWORKS001",
+            "year": "2013",
+            "genre": [
+                "Electronic"
+            ],
+            "resource_url": "http://api.discogs.com/releases/4947975",
+            "type": "release",
+            "id": 4947975
+        },
+        {
+            "style": [
+                "Techno"
+            ],
+            "thumb": "http://api.discogs.com/image/R-90-3247027-1328646279.jpeg",
+            "format": [
+                "Vinyl",
+                "12\"",
+                "White Label",
+                "45 RPM",
+                "33 ⅓ RPM"
+            ],
+            "country": "UK",
+            "title": "Karenn - Untitled (Sheworks 001)",
+            "uri": "/Karenn-Untitled-Sheworks-001/master/601646",
+            "community": {
+                "have": 295,
+                "want": 548
+            },
+            "label": [
+                "Works The Long Nights"
+            ],
+            "catno": "SHEWORKS001",
+            "year": "2011",
+            "genre": [
+                "Electronic"
+            ],
+            "resource_url": "http://api.discogs.com/masters/601646",
+            "type": "master",
+            "id": 601646
+        },
+        {
+            "style": [
+                "Techno"
+            ],
+            "thumb": "http://api.discogs.com/image/R-90-4049004-1353530165-1831.jpeg",
+            "format": [
+                "Vinyl",
+                "12\"",
+                "45 RPM",
+                "Deluxe Edition",
+                "Numbered"
+            ],
+            "country": "UK",
+            "title": "Karenn / Analogue Cops, The - Untitled",
+            "uri": "/Karenn-Analogue-Cops-Untitled/release/4049004",
+            "community": {
+                "have": 66,
+                "want": 125
+            },
+            "label": [
+                "Bleep",
+                "The Green Series",
+                "Dubplates & Mastering"
+            ],
+            "catno": "BLPGRN001",
+            "year": "2012",
+            "genre": [
+                "Electronic"
+            ],
+            "resource_url": "http://api.discogs.com/releases/4049004",
+            "type": "release",
+            "id": 4049004
+        },
+        {
+            "style": [
+                "Techno"
+            ],
+            "thumb": "http://api.discogs.com/image/R-90-4048244-1359228961-9679.jpeg",
+            "format": [
+                "Vinyl",
+                "12\"",
+                "Limited Edition"
+            ],
+            "country": "UK",
+            "title": "Karenn / Analogue Cops, The - Untitled",
+            "uri": "/Karenn-Analogue-Cops-Untitled/release/4048244",
+            "community": {
+                "have": 156,
+                "want": 157
+            },
+            "label": [
+                "Bleep",
+                "The Green Series",
+                "Dubplates & Mastering"
+            ],
+            "catno": "BLPGRN001",
+            "year": "2012",
+            "genre": [
+                "Electronic"
+            ],
+            "resource_url": "http://api.discogs.com/releases/4048244",
+            "type": "release",
+            "id": 4048244
+        },
+        {
+            "style": [
+                "Techno"
+            ],
+            "thumb": "http://api.discogs.com/image/R-90-4561664-1368427521-8476.jpeg",
+            "format": [
+                "File",
+                "FLAC",
+                "EP"
+            ],
+            "country": "UK",
+            "title": "Karenn / Analogue Cops, The - Untitled",
+            "uri": "/Karenn-Analogue-Cops-Untitled/release/4561664",
+            "community": {
+                "have": 1,
+                "want": 9
+            },
+            "label": [
+                "Bleep",
+                "The Green Series",
+                "Dubplates & Mastering"
+            ],
+            "catno": "BLPGRN001",
+            "year": "2012",
+            "genre": [
+                "Electronic"
+            ],
+            "resource_url": "http://api.discogs.com/releases/4561664",
+            "type": "release",
+            "id": 4561664
+        },
+        {
+            "style": [
+                "Techno"
+            ],
+            "thumb": "http://api.discogs.com/image/R-90-4561669-1368427544-3051.jpeg",
+            "format": [
+                "File",
+                "MP3",
+                "EP"
+            ],
+            "country": "UK",
+            "title": "Karenn / Analogue Cops, The - Untitled",
+            "uri": "/Karenn-Analogue-Cops-Untitled/release/4561669",
+            "community": {
+                "have": 12,
+                "want": 9
+            },
+            "label": [
+                "Bleep",
+                "The Green Series",
+                "Dubplates & Mastering"
+            ],
+            "catno": "BLPGRN001",
+            "year": "2012",
+            "genre": [
+                "Electronic"
+            ],
+            "resource_url": "http://api.discogs.com/releases/4561669",
+            "type": "release",
+            "id": 4561669
+        },
+        {
+            "style": [
+                "Techno"
+            ],
+            "thumb": "http://api.discogs.com/image/R-90-4561670-1368427568-4281.jpeg",
+            "format": [
+                "File",
+                "WAV",
+                "EP"
+            ],
+            "country": "UK",
+            "title": "Karenn / Analogue Cops, The - Untitled",
+            "uri": "/Karenn-Analogue-Cops-Untitled/release/4561670",
+            "community": {
+                "have": 1,
+                "want": 10
+            },
+            "label": [
+                "Bleep",
+                "The Green Series",
+                "Dubplates & Mastering"
+            ],
+            "catno": "BLPGRN001",
+            "year": "2012",
+            "genre": [
+                "Electronic"
+            ],
+            "resource_url": "http://api.discogs.com/releases/4561670",
+            "type": "release",
+            "id": 4561670
+        },
+        {
+            "style": [
+                "Techno"
+            ],
+            "thumb": "http://api.discogs.com/image/R-90-4049004-1353530165-1831.jpeg",
+            "format": [
+                "Vinyl",
+                "12\"",
+                "45 RPM",
+                "Deluxe Edition",
+                "Numbered"
+            ],
+            "country": "UK",
+            "title": "Karenn / Analogue Cops, The - Untitled",
+            "uri": "/Karenn-Analogue-Cops-Untitled/master/494243",
+            "community": {
+                "have": 236,
+                "want": 310
+            },
+            "label": [
+                "Bleep",
+                "The Green Series",
+                "Dubplates & Mastering"
+            ],
+            "catno": "BLPGRN001",
+            "year": "2012",
+            "genre": [
+                "Electronic"
+            ],
+            "resource_url": "http://api.discogs.com/masters/494243",
+            "type": "master",
+            "id": 494243
+        }
+    ]
+
+}
