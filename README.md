@@ -4,7 +4,6 @@ A small web application for keeping track of my vinyl. Built using [Ruby on Rail
 
 Built for [CS50](https://cs50.harvard.edu/)
 
-## License
 ## Author
 [M. Maxwell Watson](http://mmwtsn.com/)
 
