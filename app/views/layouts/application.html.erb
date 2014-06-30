@@ -13,6 +13,9 @@
    <h1>records</h1>
    <h2>for managing vinyl</h2>
 
+   <% if params[:action] == 'show' %>
+     <%= link_to 'back', root_path, class: 'back' %>
+   <% end %>
    <div class="error"></div>
 </header>
 
