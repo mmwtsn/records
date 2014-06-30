@@ -18,7 +18,7 @@ feature 'Records UI' do
 
     # Iterate over each format to ensure all results are vinyl
     verboten.each do |format|
-      expect(page).to have_no_content(format)
+      expect(page.assert_no_selector(format)).to be_true
     end
   end
 
