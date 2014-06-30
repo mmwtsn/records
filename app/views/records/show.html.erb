@@ -1,15 +1,13 @@
 <article class="record">
-  <h1 class="title"><%= @record['title'] %></h1>
-  <!-- <h2 class="artist"><%= @record['artists'][0]['name'] %></h2> -->
+  <h1 class="title"><%= @record['title'] %>
+    <span class="artist"><%= @record['artists'][0]['name'] %></span>
+  </h1>
 
   <% @record['tracklist'].each.with_index(1) do |track, i| %>
     <article class="track">
-      <p class="title"><span class="track-number"><%= i %>.</span>&nbsp;<%= track['title'] %></p>
+      <p class="title"><span class="track-number"><%= i %>.</span>&nbsp;<%= track['title'] %><span class="duration"><%= track['duration'] %></span></p>
 
-      <p class="meta">
-        <span class="duration"><%= track['duration'] %></span>
-        <span class="position">side: <%= track['position'] %></span>
-      </p>
+      <p class="position">side: <%= track['position'] %></p>
     </article>
   <% end %>
 </article>
