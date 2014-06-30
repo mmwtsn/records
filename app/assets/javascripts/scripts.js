@@ -33,6 +33,16 @@ $(function() {
       // Update error message
       $('.error').html('Search for something!');
     }
+
+    // Show clear button when results are displayed
+    var $clear = $('.clear');
+    $clear.show();
+
+    // Clear search results at the user's request
+    $clear.on('click', function() {
+      $records.empty();
+      $artist.val('');
+    });
   });
 
   //
