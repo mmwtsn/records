@@ -1,0 +1,475 @@
+/* line 1, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/extends/_button.scss */
+button,
+input[type="submit"] {
+  -webkit-font-smoothing: antialiased;
+  background-color: #477dca;
+  border-radius: 0.1875em;
+  color: white;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  padding: .75em 1em;
+  text-decoration: none;
+  font-weight: 400;
+}
+/* line 14, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/extends/_button.scss */
+button:hover,
+input[type="submit"]:hover {
+  background-color: #5b8bd0;
+  color: white;
+}
+
+/* line 1, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: white;
+  color: #333333;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* line 10, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1.25em;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 17, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+h1 {
+  font-size: 2.25em;
+}
+
+/* line 21, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 25, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+h3 {
+  font-size: 1.75em;
+}
+
+/* line 29, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+h4 {
+  font-size: 1.5em;
+}
+
+/* line 33, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+h5 {
+  font-size: 1.25em;
+}
+
+/* line 37, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+h6 {
+  font-size: 1em;
+}
+
+/* line 41, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+p {
+  margin: 0 0 0.75em;
+}
+
+/* line 45, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+a {
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+  color: #477dca;
+  text-decoration: none;
+}
+/* line 50, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+a:hover {
+  color: #5b8bd0;
+}
+/* line 54, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+a:active, a:focus {
+  color: #5b8bd0;
+  outline: none;
+}
+
+/* line 60, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+hr {
+  border-bottom: 1px solid #dddddd;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0;
+}
+
+/* line 68, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+img {
+  margin: 0;
+  max-width: 100%;
+}
+
+/* line 73, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+blockquote {
+  border-left: 2px solid #dddddd;
+  color: #595959;
+  margin: 1.5em 0;
+  padding-left: 0.75em;
+}
+
+/* line 80, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+cite {
+  color: #737373;
+  font-style: italic;
+}
+/* line 84, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_typography.scss */
+cite:before {
+  content: '\2014 \00A0';
+}
+
+/* line 1, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_forms.scss */
+fieldset {
+  background: #f7f7f7;
+  border: 1px solid #dddddd;
+  margin: 0 0 0.75em 0;
+  padding: 1.5em;
+}
+
+/* line 10, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_forms.scss */
+input,
+label,
+select {
+  display: block;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+/* line 16, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_forms.scss */
+label {
+  font-weight: bold;
+  margin-bottom: 0.375em;
+}
+/* line 20, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_forms.scss */
+label.required:after {
+  content: "*";
+}
+/* line 24, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_forms.scss */
+label abbr {
+  display: none;
+}
+
+/* line 31, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_forms.scss */
+textarea,
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"],
+select[multiple=multiple] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: border-color;
+  -moz-transition: border-color;
+  transition: border-color;
+  background-color: white;
+  border-radius: 0.1875em;
+  border: 1px solid #dddddd;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em 0.5em;
+  width: 100%;
+}
+/* line 44, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_forms.scss */
+textarea:hover,
+input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="url"]:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover,
+select[multiple=multiple]:hover {
+  border-color: #c4c4c4;
+}
+/* line 48, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_forms.scss */
+textarea:focus,
+input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
+select[multiple=multiple]:focus {
+  border-color: #477dca;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
+  outline: none;
+}
+
+/* line 55, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_forms.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 59, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+/* line 63, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_forms.scss */
+input[type="checkbox"], input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em;
+}
+
+/* line 68, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_forms.scss */
+input[type="file"] {
+  margin-bottom: 0.75em;
+  padding-bottom: 0.5em;
+  width: 100%;
+}
+
+/* line 74, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_forms.scss */
+select {
+  width: auto;
+  max-width: 100%;
+  margin-bottom: 1.5em;
+}
+
+/* line 1, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_tables.scss */
+table {
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* line 8, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_tables.scss */
+th {
+  border-bottom: 1px solid #b7b7b7;
+  font-weight: bold;
+  padding: 0.75em 0;
+  text-align: left;
+}
+
+/* line 15, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_tables.scss */
+td {
+  border-bottom: 1px solid #dddddd;
+  padding: 0.75em 0;
+}
+
+/* line 20, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_tables.scss */
+tr, td, th {
+  vertical-align: middle;
+}
+
+/* line 1, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_lists.scss */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/* line 19, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_lists.scss */
+dl {
+  margin-bottom: 0.75em;
+}
+/* line 22, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_lists.scss */
+dl dt {
+  font-weight: bold;
+  margin-top: 0.75em;
+}
+/* line 27, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_lists.scss */
+dl dd {
+  margin: 0;
+}
+
+/* line 2, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/base/_buttons.scss */
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* line 4, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+html {
+  background: #222;
+}
+
+/* line 8, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+body {
+  max-width: 960px;
+  margin: 4rem auto 0;
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  background: transparent;
+  color: #eee;
+}
+
+/* line 17, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+main {
+  margin: 0 0 2rem;
+}
+
+/* line 21, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+h1 {
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+/* line 26, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+h3 {
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+/* line 31, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.search-wrapper {
+  overflow: hidden;
+  padding: 0 0.7rem 0 0;
+}
+
+/* line 36, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+#artist {
+  width: 100%;
+  height: 2.6rem;
+}
+
+/* line 41, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+#search {
+  float: right;
+}
+
+/* line 45, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.record {
+  background: #2b2b2b;
+  border-bottom: 4px solid #333;
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+}
+/* line 51, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.record h3 {
+  font-weight: 100;
+}
+/* line 55, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.record p {
+  color: #aaa;
+  margin: 0;
+}
+
+/* line 64, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.record .title .artist {
+  float: right;
+  color: #444;
+}
+
+/* line 71, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.results .record:hover {
+  cursor: pointer;
+  background: #2e2e2e;
+}
+
+/* line 77, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.results .saved {
+  position: relative;
+}
+/* line 80, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.results .saved:hover {
+  cursor: default;
+  background: #2b2b2b;
+}
+/* line 86, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.results .saved:before, .results .saved:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 2rem;
+}
+/* line 94, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.results .saved:before {
+  top: 0;
+  height: 100%;
+  background: #90ee90;
+}
+/* line 100, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.results .saved:after {
+  bottom: -4px;
+  height: 4px;
+  background: #65ad65;
+}
+
+/* line 107, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.clear {
+  display: none;
+  background: #444;
+}
+/* line 111, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.clear:hover {
+  background: #4c4c4c;
+}
+
+/* line 117, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.view-record,
+.delete-record {
+  float: right;
+  margin: 0 0 0 0.5rem;
+}
+
+/* line 122, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+header {
+  margin: 0 0 3rem;
+}
+/* line 125, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+header h2 {
+  font-weight: 100;
+  color: #666;
+}
+
+/* line 131, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+footer {
+  text-align: center;
+}
+/* line 134, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+footer p {
+  font-size: 0.8rem;
+  font-weight: 100;
+  color: #666;
+}
+
+/* line 141, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.error {
+  color: #f68686;
+  float: right;
+  margin: -1.5rem 0 0;
+}
+
+/* line 147, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.track {
+  border-bottom: 1px solid #444;
+  margin: 0;
+  padding: 1rem 0;
+}
+/* line 152, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.track:last-child {
+  border: none;
+  margin: 0;
+}
+/* line 157, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.track .title {
+  margin: 0;
+}
+/* line 160, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.track .track-number {
+  display: inline-block;
+  width: 1.5rem;
+}
+/* line 165, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.track .duration {
+  float: right;
+}
+/* line 169, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.track .position {
+  text-indent: 1.5rem;
+  color: #444;
+}
+
+/* line 175, /Users/Maxwell/Code/open-source/records/app/assets/stylesheets/application.scss */
+.collection {
+  margin: 3rem 0;
+}
