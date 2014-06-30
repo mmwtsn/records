@@ -13,12 +13,31 @@
   <body>
     <header>
     <h1>records</h1>
-    <h2>application documentation</h2>
+    <h2>app documentation</h2>
     </header>
 
     <main>
-      <h3>title</h3>
-      <p>Paragraph</p>
+      <h3>Background</h3>
+      <p>Records is a web app for helping to keep track of a small record collection. Last summer I picked up a used record player on Craigslist and discovered that vinyl and digital media compliment one another quite nicely as much of the music that is unavailable through streaming services (e.g. Rdio or Spotify) is released on vinyl. Given that, I was interested in building an app to track my nascent record collection.</p>
+
+      <h3>Getting Started</h3>
+      <p>To get started, open a new Terminal shell and either download the source code from CS50 Submit or, if you have Git installed, clone the repository from GitHub by executing: <span class="code">git clone https://github.com/mmwtsn/records.git</span>. If you downloaded the archive, unzip it by executing <span class="code">unzip records.zip</span>. Now that you have the source code, go ahead and execute <span class="code">cd records</span> to navigate into the project directory.</p>
+
+      <h3>System Dependencies</h3>
+      <p>Records is built using Ruby on Rails atop the <a href="http://discogs.com/">Discogs</a> API. While Rails is a pleasure to use, it does come with a fair number of dependencies. Check to see if you have Ruby installed by executing <span class="code">which ruby</span>. If no output is shown, you must first <a href="http://www.ruby-lang.org/en/installation/">install Ruby</a>before proceeding. Once Ruby is installed, ensure that Ruby's package manager was installed correctly by executing <span class="code">which gem</span> as you will need it to install the remainder of the development dependencies. Again, if no output is shown, <a href="https://rubygems.org/pages/download">install RubyGems</a> before proceeding. Finally, check to see that your local instance of MySQL is installed properly and running by executing <span class="code">which mysql</span> and <span class="code">mysqladmin status</span>. MySQL should be installed already in most operating systems. If it's not installed on your computer, check the <a href="http://dev.mysql.com/doc/refman/5.1/en/installing.html">MySQL documentation</a> for the latest installion instructions.</p>
+
+      <h3>Development Dependencies</h3>
+      <p>Once Ruby, RubyGems and MySQL are installed properly, we'll use <a href="http://bundler.io/">Bundler</a> to download and install the rest of the app's local dependencies. Install Bundler by running <span class="code">gem install bundler</span>. From inside the records directory, Bundle the remaining libraries by running <span class="code">bundle install</span>.</p>
+
+      <h3>Local Setup</h3>
+      <p>With all of the dependcies installed, you're ready to get started. Run <span class="code">rake db:setup && rake db:migrate</span> to create the database, load the database schema and seed the database. Once that's complete, the migrate command will ensure that your database tables are set up properly. If interested, you can run the test suite by executing <span class="code">rake spec</span>, though, this comes with added dependcies that you can learn more about in the <a href="http://github.com/thoughtbot/capybara-webkit">capybara-webkit documentation</a>. You are all set! Start a local server by running <span class="code">rails server</span> and navigate your browswer of choice to <span class="code">http://localhost:3000</span> to use the app.</p>
+
+      <p>Finally, as the app actively consumes the Discogs API, you will need an internet connection to use the app.</p>
+
+      <h3>Using Records</h3>
+      <p>Using records is quite simple. From the home page, enter the name of an artist you are interested in (e.g. "jamie xx") and click the search button. Records will query the Discogs API and return a list of matches. Click any results you are interested in saving and it will automatically be saved to your collection and will appear below your search in your collection. From here, you can continue searching, clear your search with "clear" or scroll down to view your collection. If a search result is already in your collection, a green stripe will appear on the right of the result indicating that it has already been saved.</p>
+
+      <p>To view information about the tracklist of each record in your collection, click the view link next to the record once it has been saved. This will open a new view displaying the track list, location on the vinyl (side A1, etc.) and trak duration. Records can be removed from your collection by clicking the delete link.</p>
     </main>
 
     <footer>
