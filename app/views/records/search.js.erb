@@ -7,10 +7,20 @@ var results = <%= raw json_escape(@results) %>;
 // Iterate over search results and add them to the DOM and the records collection
 results['results'].forEach(function(record) {
 
+  // Notify user if search result is already in their collection
+  var saved = false;
+
+  // Iterate over each saved record in collection and check against this result's id
+  <% @records.each do |record| %>
+    if (<%= record.discogs_id %> === record['id']) {
+      saved = true;
+    }
+  <% end %>
+
   // Only allow the record into the collection if it's vinyl
   if (record['format'][0] === 'Vinyl') {
     $('.results').append(
-      '<article class="record" data-id="' + record["id"] + '">'
+      '<article class="record' + (saved ? " saved" : "") + '" data-id="' + record["id"] + '">'
       + '<h1 class="title">' + record["title"] + '</h1>'
       + '<p class="label">' + record["label"] + '</p>'
       + '<p class="format">' + record["format"][0] + '</p>'
