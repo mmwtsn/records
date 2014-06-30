@@ -5,7 +5,7 @@ $(function() {
   //
   var $artist  = $('#artist');
   var $search  = $('#search');
-  var $records = $('.records');
+  var $records = $('.results');
 
   //
   // Ensure search input field is empty on load
