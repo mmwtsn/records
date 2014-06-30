@@ -1,0 +1,9 @@
+<h1 class="title"><%= @record['title'] %></h1>
+
+<% @record['tracklist'].each do |track| %>
+  <article class="track">
+    <h2 class="title"><%= track['title'] %></h2>
+    <p class="duration"><%= track['duration'] %></p>
+    <p class="position"><%= track['position'] %></p>
+  </article>
+<% end %>
