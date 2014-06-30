@@ -14,13 +14,16 @@ body {
   padding: 1rem 2rem;
 
   &:hover {
-    cursor: pointer;
     background: #f0f0f0;
   }
 
   &:active {
     background: #eee;
   }
+}
+
+.results .record:hover {
+  cursor: pointer;
 }
 
 .selected {
