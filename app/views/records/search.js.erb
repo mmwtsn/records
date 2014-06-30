@@ -20,10 +20,9 @@ results['results'].forEach(function(record) {
   // Only allow the record into the collection if it's vinyl
   if (record['format'][0] === 'Vinyl') {
     $('.results').append(
-      '<article class="record' + (saved ? " saved" : "") + '" data-id="' + record["id"] + '">'
-      + '<h1 class="title">' + record["title"] + '</h1>'
+      '<article class="record ' + (saved ? "saved " : "") + record["format"][0].toLowerCase() + '" data-id="' + record["id"] + '">'
+      + '<h3 class="title">' + record["title"] + '</h3>'
       + '<p class="label">' + record["label"] + '</p>'
-      + '<p class="format">' + record["format"][0] + '</p>'
     + '</article>'
     );
 
