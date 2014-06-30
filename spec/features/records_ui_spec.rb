@@ -32,4 +32,14 @@ feature 'Records UI' do
     first('.record').click
     expect(page.assert_selector('.selected')).to be_true
   end
+
+  scenario 'clears current search results', js: true do
+    search_for('Karenn')
+
+    click_button 'clear'
+
+    within('.results') do
+      expect(page).to have_no_content('.record')
+    end
+  end
 end
