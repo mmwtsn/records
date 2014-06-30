@@ -37,8 +37,8 @@ feature 'Records' do
     end
   end
 
+  # User can remove records from their collection because nothing lasts forever
   scenario 'delete a saved record', js: true do
-    # User can remove records from their collection because nothing lasts forever
     title = 'A Series of Desecration'
     record = FactoryGirl.create(:record, title: title)
 
@@ -46,9 +46,5 @@ feature 'Records' do
     click_link 'delete'
 
     expect(page).to have_no_content(title)
-  end
-
-  scenario 'view a record in their collection' do
-    pending # User can click on a record to see more information about it
   end
 end
