@@ -1,7 +1,9 @@
-<% @records.each do |record| %>
+<% if @records.each do |record| %>
 <article class="record">
   <%= record.title %>
   <%= link_to 'delete', record_path(record.id), method: :delete, remote: true, class: 'delete-record' %>
   <%= link_to 'view', record_path(record.id), class: 'view-record' %>
 </article>
-<% end %>
+<% end.empty? %>
+  <p class="empty">Buy some records, kid!</p>
+<% end%>
