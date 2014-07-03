@@ -193,3 +193,14 @@ footer {
 .collection-header {
   margin: 3rem 0 0;
 }
+
+.empty {
+  border: 2px dashed #888;
+  color: #888;
+  margin: 1rem 0 0 0;
+  padding: 2rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-transform: lowercase;
+  text-align: center;
+}
