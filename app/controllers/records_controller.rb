@@ -20,7 +20,7 @@ class RecordsController < ApplicationController
   end
 
   def search
-    artist = params[:artist].split(' ').join('+')
+    artist = params[:artist].split('-').join('+')
     @records = Record.all
 
     if Rails.env == 'test'
