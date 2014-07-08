@@ -56,6 +56,17 @@ $(function() {
   //
   $('.delete-record').bind('ajax:success', function() {
     $(this).closest('.record').remove();
+
+    var $collection = $('.collection');
+
+    // Was that the last record present in the UI?
+    if (!$collection.find('.record').length) {
+      $collection.append(
+        '<p class="empty">' +
+          'Buy some records, kid!' +
+        '</p>'
+      );
+    }
   });
 
 });
